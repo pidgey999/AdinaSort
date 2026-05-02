@@ -1,4 +1,4 @@
-# Battle Royale Helper GUI
+# AdinaSort GUI
 
 This project provides a simple Tkinter GUI for:
 - Sorting inventory
@@ -7,21 +7,27 @@ This project provides a simple Tkinter GUI for:
 
 ## Build `.exe` (Windows)
 
-### 1) Install Python (only for builder)
-Install Python 3.11+ and ensure `python` is available in terminal.
+### 1) Place custom icon
+Put your icon file here (ICO format):
+- `assets/adina.ico`
 
-### 2) Run build script
+> Note: Windows executable icons require `.ico`. If your source image is PNG/JPG, convert it to ICO first.
+
+### 2) Run one-click build + release zip
 ```bat
 build_exe.bat
 ```
 
 ### 3) Output
-The standalone executable will be generated at:
-- `dist\\BattleRoyaleHelper.exe`
+- Executable: `dist\\AdinaSort.exe`
+- Release package: `release\\AdinaSort.zip`
+
+The zip includes:
+- `AdinaSort.exe`
+- `README.md`
 
 ## Manual build command
-If you prefer running manually:
 ```bat
 python -m pip install pyinstaller
-pyinstaller --noconfirm --clean --onefile --windowed --name BattleRoyaleHelper app.py
+pyinstaller --noconfirm --clean --onefile --windowed --name AdinaSort --icon assets\adina.ico app.py
 ```
